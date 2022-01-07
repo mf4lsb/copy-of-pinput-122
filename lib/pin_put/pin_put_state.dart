@@ -32,7 +32,6 @@ extension on ThemeData {
       labelStyle: hiddenTextStyle,
       helperStyle: hiddenTextStyle,
       prefixStyle: hiddenTextStyle,
-      floatingLabelStyle: hiddenTextStyle,
       suffixStyle: hiddenTextStyle,
       hintStyle: hiddenTextStyle,
     );
