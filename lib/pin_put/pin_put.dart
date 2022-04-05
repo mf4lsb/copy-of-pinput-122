@@ -67,6 +67,7 @@ class PinPut extends StatefulWidget {
     this.selectionControls,
     this.buildCounter,
     this.restorationId,
+    this.isObscure = false,
   })  : assert(fieldsCount > 0),
         super(key: key);
 
@@ -242,6 +243,9 @@ class PinPut extends StatefulWidget {
   /// Provide any symbol to obscure each [PinPut] field
   /// Recommended ●
   final String? obscureText;
+
+  // Create ● for flutter web
+  final bool isObscure;
 
   /// {@macro flutter.widgets.editableText.textCapitalization}
   final TextCapitalization textCapitalization;

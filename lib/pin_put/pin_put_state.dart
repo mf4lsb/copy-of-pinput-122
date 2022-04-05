@@ -230,11 +230,20 @@ class PinPutState extends State<PinPut>
 
   Widget _buildFieldContent(int index, String pin) {
     if (index < pin.length) {
-      return Text(
-        widget.obscureText ?? pin[index],
-        key: ValueKey<String>(index < pin.length ? pin[index] : ''),
-        style: textStyle,
-      );
+      return widget.isObscure
+          ? Container(
+              width: 16,
+              height: 16,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.black,
+              ),
+            )
+          : Text(
+              widget.obscureText ?? pin[index],
+              key: ValueKey<String>(index < pin.length ? pin[index] : ''),
+              style: textStyle,
+            );
     }
 
     final isActiveField = index == pin.length;
